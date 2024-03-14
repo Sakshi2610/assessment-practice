@@ -1,0 +1,29 @@
+h1{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+}
+.outer-box{
+    height: 500px;
+    width: 500px;
+    border: 2px solid aqua;
+    border-radius: 50%;
+    position: relative;
+    animation: rotateClockwise 4s linear infinite alternate;
+}
+.inner-box{
+    height: 50px;
+    width: 50px;
+    border: 2px solid red;
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+}
+@keyframes rotateClockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
