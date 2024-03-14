@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+</head>
+<body>
+    <h1>API Documentation</h1>
+
+    <h2>Introduction:</h2>
+    <p>This API provides various endpoints to interact with the E-commerce system.</p>
+
+    <h2>Endpoints:</h2>
+    <ol>
+        <li>
+            <h3>POST /products/create</h3>
+            <ul>
+                <li>Open Postman >> Go to Request</li>
+                <li>Paster this URL >> http://127.0.0.1:5000/products/create</li>
+                <li>Choose the method as "POST" and Go to Body</li>
+                <li>Select Raw >> Add the product keys and values</li>
+                <li>Send request</li>
+                <li>Product is Added Successfully.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>GET /products</h3>
+            <ul>
+                <li>It shows a list of all products.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>GET /products/{id}</h3>
+            <ul>
+                <li>It shows a details of a specific product.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>POST /cart</h3>
+            <ul>
+                <li>Again go to Postman.</li>
+                <li>Select POST method</li>
+                <li>Paster URL >> http://127.0.0.1:5000/cart</li>
+                <li>Select Raw >> Add the product id and quantity</li>
+                <li>Send request</li>
+                <li>Product is added to the cart Successfully.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>GET /cart</h3>
+            <ul>
+                <li>Shows the items which is in the Cart.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>DELETE /cart/{id}</h3>
+            <ul>
+                <li>Go to Postman.</li>
+                <li>Paster URL >> http://127.0.0.1:5000/cart/3</li>
+                <li>Choose method as DELETE</li>
+                <li>Send Request</li>
+                <li>Item is removed from the cart Successfully.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Usage:</h2>
+    <ul>
+        <li>Ensure to include necessary parameters in the request body.</li>
+        <li>Use appropriate HTTP methods for different actions.</li>
+    </ul>
+</body>
+</html>
