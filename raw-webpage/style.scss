@@ -93,11 +93,14 @@ body{
     }
     @media screen and (max-width: 768px) {
         header {
+            display: flex;
+            justify-content: space-around; 
+            flex-direction: row;
             .nav {
                 display: none;
                 flex-direction: column;
                 align-items: flex-start;
-                padding-top: 10px; // Add padding to the top of the nav items
+                padding-top: 10px;
 
                 .nav-item {
                     display: block;
@@ -106,11 +109,10 @@ body{
             }
 
             .hamburger-menu {
-                display: block; // Display hamburger menu icon on smaller screens
+                display: block; 
 
             }
 
-            // Toggle navbar visibility when .nav-open class is present
             &.nav-open {
                 .nav {
                     display: flex;
@@ -161,6 +163,7 @@ body{
           }
         }
     }
+    
 }
   
 .whatWeDo-section{
@@ -218,6 +221,29 @@ body{
             }
         }
     }
+    @media screen and (max-width: 768px) {
+        .container {
+            .whatWeDo-row {
+                flex-direction: column;
+
+                .left-image{
+                    width: 30%;
+                    position: relative;
+                    left: 0;
+                    right: 0;
+                    opacity: 1;
+                }
+                .right-content {
+                    width: 100%;
+                    position: relative;
+                    left: 0;
+                    right: 0;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
 }
 
 @keyframes slideInLeft {
@@ -294,6 +320,19 @@ body{
             }
         }
     }
+    @media screen and (max-width: 768px) {
+        .container {
+            .row {
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .casestudy-card {
+                    width: calc(50% - 20px);
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
 }
 
 .container-footer{
@@ -325,6 +364,10 @@ body{
                         width: calc(100% - 40px); 
                         left: 20px; 
                     }
+                    @media screen and (max-width: 768px){
+                        display: flex;
+                        margin: 0;
+                    }
             }
         }
         .social{
@@ -333,6 +376,15 @@ body{
             ul{
                 margin-left: 35%;
             }
+            @media screen and (max-width: 768px){
+                display: flex;
+                flex-direction: column;
+                ul{
+                    align-self: center;
+                    margin-left: 0;
+                }
+            }
+            
         }
     }
 }
