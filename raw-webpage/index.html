@@ -13,8 +13,13 @@
             <a href="/" class="logo-link">
                 <img src="https://www.raweng.com/v3/assets/bltaacb6b0c9b693c2d/bltc1a71705f49d391d/5de663548d1dce6ad6bed8bf/header-logo.svg?format=pjpg&amp;width=220" alt="Raw Engineering">
             </a>
-    
-          <ul class="nav nav-pills">
+            <div class="hamburger-menu">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+
+          <ul class="nav nav-pills nav-open">
             <li class="nav-item">
               <div class="dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -33,11 +38,6 @@
             <li class="nav-item"><a href="#" class="nav-link">CAREERS</a></li>
             <li class="nav-item"><a href="#" class="nav-link active">CONTACT</a></li>
           </ul>
-          <div class="hamburger-menu">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
         </header>
       </div>
 
@@ -195,13 +195,14 @@
 
       <script>   
         document.addEventListener('DOMContentLoaded', function() {
-          const hamburgerMenu = document.querySelector('.hamburger-menu');
-          const nav = document.querySelector('.nav');
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const nav = document.querySelector('.nav');
 
-          hamburgerMenu.addEventListener('click', function() {
-            nav.classList.toggle('nav-open');
-          });
-        });    
+        hamburgerMenu.addEventListener('click', function() {
+          nav.classList.toggle('nav-open');
+        });
+      });
+                 
       </script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
