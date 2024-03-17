@@ -1,0 +1,338 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container-nav{
+    background-color: #151416;
+    position: fixed;
+    width: 100%;
+    top: 0; 
+    left: 0; 
+    z-index: 1002;
+    header{
+        border-bottom: none !important;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+        a{
+            img{
+                margin-right: 300px;
+            }
+        }
+        .nav{
+            .nav-item{
+                font-size: 14px;
+                .nav-link{
+                    color: #fff;
+                    margin-top: 15px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    position: relative;
+                    overflow: hidden;
+                
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 20%; 
+                        width: 0;
+                        height: 1px;
+                        background-color: white; 
+                        transition: width 0.4s ease; 
+                        z-index: 1; 
+                    }
+                    
+                    &:hover:before {
+                        width: calc(100% - 40px); 
+                        left: 20px; 
+                    }
+                }
+                .active{
+                    border-radius: 20px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+                .dropdown{
+                    .dropdown-menu {
+                        background-color: #151416; 
+                        border: none; 
+                        z-index: 1003; 
+
+                    }
+                    .dropdown-item {
+                        color: #fff;
+                        padding: 10px; 
+                        font-size: 14px;
+                        text-align: left;
+                        &:hover{
+                            background-color: #151416;
+                            color: blue;
+                        }
+                    }
+                }
+            }
+        }
+        .hamburger-menu {
+            display: none; 
+            cursor: pointer;
+            padding: 10px;
+        }
+
+
+        .line {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        header {
+            .nav {
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                padding-top: 10px; // Add padding to the top of the nav items
+
+                .nav-item {
+                    display: block;
+                    padding: 10px;
+                }
+            }
+
+            .hamburger-menu {
+                display: block; // Display hamburger menu icon on smaller screens
+
+            }
+
+            // Toggle navbar visibility when .nav-open class is present
+            &.nav-open {
+                .nav {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
+
+.container-home{
+    margin-top: 135px;
+    padding: 0;
+    border-top: #151416;
+    z-index: 1001;
+    position: relative;
+    .homepage {
+        background-color: #1a191b; 
+        color: white;
+        height: 100%;
+      
+        .section-homepage {
+          section {
+            position: absolute;
+            margin-top: 10%;
+            left: 15%;
+      
+            h1 {
+              font-size: 70px;
+            }
+      
+            p {
+              width: 40%;
+              font-size: 20px;
+            }
+          }
+        }
+      
+        .landing-image {
+          margin-left: 50%;
+          margin-top: -40px;
+          overflow: hidden;
+      
+          img {
+            width: 90%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+    }
+}
+  
+.whatWeDo-section{
+    .container{
+        margin-bottom: 30px;
+        .title-linethrough{
+            color: red;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+        .whatWeDo-row{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            .left-image{
+                width: 50%;
+                position: relative;
+                z-index: 1;
+                opacity: 0; 
+                transform: translateX(-100%); 
+                animation: slideInLeft 3s forwards; 
+            }
+            .right-content{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                left: 55%;
+                padding: 20px;
+                margin-top: 40px;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                opacity: 0;
+                transform: translateX(100%); 
+                animation: slideInRight 3s forwards; 
+                .card-index{
+                    font-size: 15px;
+                }
+                .card-title{
+                    font-size: 38px;
+                    font-weight: 700;
+                }
+                .card-description{
+                    text-align:justify;
+                    margin-left: 30px;
+                    
+                }
+                .link{
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
+
+.latest-work-section{
+    .container{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .title-linethrough{
+            color: red;
+            margin-bottom: 50px;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+        .row {
+            display: flex;
+            flex-wrap: nowrap; 
+            overflow-x: auto;
+            margin-left: -5%;
+            margin-right: -5%;
+            padding-bottom: 15px; 
+        }
+
+        .index-module--casestudy_Row--2BTaE {
+            justify-content: center; 
+            overflow-x: auto; 
+        }
+
+        .casestudy-card {
+            flex: 0 0 auto; 
+            margin: 0 10px; 
+            width: calc(33.333% - 35px); 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease;
+            img{
+                width: 100%;
+                height: -100%;
+            }
+            .index-module--work_Card--8FcVw{
+                a{
+                    text-decoration: none;
+                    .index-module--card_Content--qmur9{
+                        margin-top: 20px;
+                        color: black;
+                        margin-bottom: 20px;
+                        .index-module--card_Tag--1ErCa{
+                            font-weight: 50;
+                            font-size: 15px;
+                        }
+                        h3{
+                            font-weight: 500;
+                        }
+                        .link{
+                            color: blue;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); 
+            }
+        }
+    }
+}
+
+.container-footer{
+    background-color: #151416;
+    margin-top: auto;
+    font-size: 14px;
+    footer{
+        .nav{
+            color: white;
+            .nav-item{
+                margin-left: 40px;
+                margin-right: 40px;
+                position: relative;
+                overflow: hidden;
+                
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%; 
+                        width: 0;
+                        height: 1px;
+                        background-color: white; 
+                        transition: width 0.4s ease; 
+                        z-index: 1; 
+                    }
+                    
+                    &:hover:before {
+                        width: calc(100% - 40px); 
+                        left: 20px; 
+                    }
+            }
+        }
+        .social{
+            margin-left: 40px;
+            display: flex;
+            ul{
+                margin-left: 35%;
+            }
+        }
+    }
+}
