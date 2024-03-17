@@ -84,6 +84,11 @@ body {
   margin: 5px 0;
 }
 @media screen and (max-width: 768px) {
+  .container-nav header {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
   .container-nav header .nav {
     display: none;
     flex-direction: column;
@@ -190,6 +195,25 @@ body {
 .whatWeDo-section .container .whatWeDo-row .right-content .link {
   margin-left: 30px;
 }
+@media screen and (max-width: 768px) {
+  .whatWeDo-section .container .whatWeDo-row {
+    flex-direction: column;
+  }
+  .whatWeDo-section .container .whatWeDo-row .left-image {
+    width: 30%;
+    position: relative;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  .whatWeDo-section .container .whatWeDo-row .right-content {
+    width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+}
 
 @keyframes slideInLeft {
   to {
@@ -258,6 +282,16 @@ body {
 .latest-work-section .container .casestudy-card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
 }
+@media screen and (max-width: 768px) {
+  .latest-work-section .container .row {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .latest-work-section .container .row .casestudy-card {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+  }
+}
 
 .container-footer {
   background-color: #151416;
@@ -288,10 +322,26 @@ body {
   width: calc(100% - 40px);
   left: 20px;
 }
+@media screen and (max-width: 768px) {
+  .container-footer footer .nav .nav-item {
+    display: flex;
+    margin: 0;
+  }
+}
 .container-footer footer .social {
   margin-left: 40px;
   display: flex;
 }
 .container-footer footer .social ul {
   margin-left: 35%;
+}
+@media screen and (max-width: 768px) {
+  .container-footer footer .social {
+    display: flex;
+    flex-direction: column;
+  }
+  .container-footer footer .social ul {
+    align-self: center;
+    margin-left: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
