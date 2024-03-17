@@ -84,11 +84,6 @@ body {
   margin: 5px 0;
 }
 @media screen and (max-width: 768px) {
-  .container-nav header {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-  }
   .container-nav header .nav {
     display: none;
     flex-direction: column;
@@ -102,7 +97,7 @@ body {
   .container-nav header .hamburger-menu {
     display: block;
   }
-  .container-nav header.nav-open .nav {
+  .container-nav header.nav-open {
     display: flex;
   }
 }
@@ -140,6 +135,30 @@ body {
   width: 90%;
   height: 100%;
   object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .container-home {
+    margin-top: 135px;
+  }
+  .container-home .homepage {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .container-home .homepage .section-homepage section {
+    margin: 0;
+    padding: 0;
+  }
+  .container-home .homepage .section-homepage section p {
+    width: 100%;
+  }
+  .container-home .homepage .landing-image {
+    margin: 0;
+    padding: 0;
+  }
+  .container-home .homepage .landing-image img {
+    width: 100%;
+  }
 }
 
 .whatWeDo-section .container {
